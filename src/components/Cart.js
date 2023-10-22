@@ -94,7 +94,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex bg-slate-200 px-4 min-h-screen">
+      <div className="flex bg-slate-200 px-4 min-h-screen mx-auto">
         {/* account details side */}
         
 

@@ -61,7 +61,7 @@ const Login = () => {
   return (
     <>
       <div className="w-full min-h-screen">
-        <div className="w-1/2 flex flex-col items-center mx-auto border rounded border-gray-500  p-5 m-5">
+        <div className="w-[350px] h-screen flex flex-col items-center mx-auto border rounded border-gray-500 justify-evenly   p-5 m-5">
           <InputControl
             label="Email"
             placeholder="Enter Email Address"

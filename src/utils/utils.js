@@ -1,15 +1,14 @@
 import { addItem, removeItem, assignBasicDetails } from "./cartSlice";
 
-
 // Function to filter restaurants when searching.
 export function filterRestaurants(searchTxt, allRestaurants) {
   if (searchTxt === "") return allRestaurants;
-  const filteredData = allRestaurants.filter(
-    (restaurant) => {
-      return restaurant?.info?.name?.toLowerCase().includes(searchTxt?.toLowerCase())
-      // restaurant?.data?.data?.area?.toLowerCase().includes(searchTxt?.toLowerCase()) )
-    }
-  );
+  const filteredData = allRestaurants.filter((restaurant) => {
+    return restaurant?.info?.name
+      ?.toLowerCase()
+      .includes(searchTxt?.toLowerCase());
+    // restaurant?.data?.data?.area?.toLowerCase().includes(searchTxt?.toLowerCase()) )
+  });
   return filteredData;
 }
 
@@ -17,8 +16,8 @@ export function filterRestaurants(searchTxt, allRestaurants) {
 export const findQuantity = (id, cartItems) => {
   const count = cartItems?.items?.findIndex((i) => i.id === id);
   if (count === undefined) return 0;
-  if(cartItems?.items[count]?.quantity === undefined) return 0;
-  return (cartItems?.items[count]?.quantity);
+  if (cartItems?.items[count]?.quantity === undefined) return 0;
+  return cartItems?.items[count]?.quantity;
 };
 
 // Function to be executed when add to cart is called, first checks if there's any restaurant conflict, we can't have orders from two restaurants together, then adds the meal.
@@ -64,3 +63,6 @@ export const removeMenu = (menu, cartItems, dispatch) => {
     dispatch(assignBasicDetails(details));
   }
 };
+
+export const emptyCartImageURL =
+  "https://res.cloudinary.com/dxguqzge7/image/upload/v1682838909/Cart_bk4xgl.jpg";
