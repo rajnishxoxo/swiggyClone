@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import { addItem, clearCart, removeItem } from "../utils/cartSlice";
 import { IMG_CDN_URL } from "./Config";
 import { auth, database } from "../firebase";
-import OrderHistory from "./OrderHistory";
 import PathContext from "../utils/PathContext";
 
 const Cart = () => {
@@ -19,14 +18,14 @@ const Cart = () => {
   //path will take you to respective restaurnat menu.
   const path = "/restaurant/" + cartItems.restaurant_id;
 
-  const {setCurrentPath} = useContext(PathContext);
-  const {pathname} = useLocation();
+  const { setCurrentPath } = useContext(PathContext);
+  const { pathname } = useLocation();
 
   //--------------------------------------- useEffects --------------------------------------------------
-  useEffect(()=> {
+  useEffect(() => {
     setCurrentPath(pathname);
-  }, [])
-  
+  }, []);
+
   useEffect(() => {
     let total = 0;
     cartItems.items.forEach((cur) => {
@@ -115,13 +114,6 @@ const Cart = () => {
                   <h3 className="text-md font-Arvo m-1">
                     Email: {currentUser.email}
                   </h3>
-                </div>
-                {/* Order History */}
-                <div className="my-1">
-                  <h2 className="text-md font-semibold font-Arvo">
-                    Order History
-                  </h2>
-                  <OrderHistory currentUser={currentUser} />
                 </div>
               </div>
             ) : (

@@ -12,8 +12,8 @@ function SearchBar() {
   //   }
   // }
   return (
-    <div className="flex items-center">
-      <input className="h-[35px] w-20 lg:w-[300px] md:w-52 sm:w-40 text-center text-lg border-2 border-[#818080] rounded font-Arvo"
+    <div className="flex items-center ml-[450px]">
+      <input className="h-[35px]  lg:px-32 lg:w-[600px] md:w-52 sm:w-40 text-center text-lg border-2 border-[#818080]  rounded font-Arvo"
         type="search"
         placeholder="Search a Restaurant"
         value={searchTxt}

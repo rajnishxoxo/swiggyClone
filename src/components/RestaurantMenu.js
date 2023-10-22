@@ -49,7 +49,7 @@ const RestaurantMenu = () => {
             </div>
             <h5 className="font-normal text-[#8d8d8d]">{deliverymsg}</h5>
           </div>
-          <div className="flex flex-col shadow-md">
+          <div className="flex flex-col  shadow-md">
             <span className="star-rating text-center border-[1px] border-[#d0d0d0] py-[5px] px-[2px] bg-green-500 text-white">
               <i className="fa fa-star"></i>{" "}
               {avgrating != "--" ? avgrating : "0.0"}
@@ -66,7 +66,7 @@ const RestaurantMenu = () => {
 
         {/* Offers area */}
 
-        <div className="w-[60%] mx-auto font-Arvo flex items-center overflow-x-auto whitespace-nowrap scrollbar-none">
+        <div className="w-[60%] mx-auto font-Arvo flex flex-col lg:flex-row lg:justify-between  items-center  whitespace-nowrap scrollbar-none">
           <div className="rounded-md m-1 p-2 shadow cursor-pointer border border-gray-400">
             <h5 className="font-semibold">30% upto 75rs</h5>
             <span className="font-[12px] text-[#a0522d]">
@@ -85,24 +85,9 @@ const RestaurantMenu = () => {
               use TRYNEW above 149rs
             </span>
           </div>
-          <div className="rounded-md m-1 p-2 shadow cursor-pointer border border-gray-400">
-            <h5 className="font-semibold">30% upto 75rs</h5>
-            <span className="font-[12px] text-[#a0522d]">
-              use TRYNEW above 149rs
-            </span>
-          </div>
-          <div className="rounded-md m-1 p-2 shadow cursor-pointer border border-gray-400">
-            <h5 className="font-semibold">30% upto 75rs</h5>
-            <span className="font-[12px] text-[#a0522d]">
-              use TRYNEW above 149rs
-            </span>
-          </div>
-          <div className="rounded-md m-1 p-2 shadow cursor-pointer border border-gray-400">
-            <h5 className="font-semibold">30% upto 75rs</h5>
-            <span className="font-[12px] text-[#a0522d]">
-              use TRYNEW above 149rs
-            </span>
-          </div>
+          
+          
+         
         </div>
 
         {/* Veg/non veg declaration */}

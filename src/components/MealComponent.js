@@ -55,7 +55,7 @@ const MealComponent = (curMenu) => {
               {description}
             </p>
           </div>
-          <div className="relative w-[20%] text-center px-[10px] overflow-hidden">
+          <div className="relative w-[40%] lg:w-[20%] text-center px-[10px] overflow-hidden">
             {imageId ? (
               <img
                 className="min-w-full max-w-full object-fill rounded-md"

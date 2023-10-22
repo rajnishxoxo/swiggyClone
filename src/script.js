@@ -17,7 +17,6 @@ import SearchTextContext from "./utils/SearchTextContext";
 import SignUp from "./components/SignUp";
 import PathContext from "./utils/PathContext";
 
-const About = lazy(() => import("./components/About"));
 // -----------------------------------------  BUILDING FOOD STUDIO     ------------------------------
 
 const AppComponent = () => {
@@ -32,11 +31,11 @@ const AppComponent = () => {
       <SearchTextContext.Provider
         value={{ searchTxt, setsearchTxt, searchTxtFound, setsearchTxtFound }}
       >
-        <PathContext.Provider value={{currentPath, setCurrentPath}}>
-        <Header />
-        <Suspense fallback={<div>Loading.......</div>}>
-          <Outlet /> {/**dynamic pages will be rendered here */}
-        </Suspense>
+        <PathContext.Provider value={{ currentPath, setCurrentPath }}>
+          <Header />
+          <Suspense fallback={<div>Loading.......</div>}>
+            <Outlet /> {/**dynamic pages will be rendered here */}
+          </Suspense>
         </PathContext.Provider>
       </SearchTextContext.Provider>
       <Footer />
@@ -54,10 +53,7 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
-      {
-        path: "/about", //child path can be added but name it directly: path: 'profile' not path: '/profile' by latter one it will be localhost:1234/profile.
-        element: <About />,
-      },
+      
       {
         path: "/contact",
         element: <Contact />,
