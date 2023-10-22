@@ -43,7 +43,7 @@ const MealComponent = (curMenu) => {
 
   return (
     <>
-      <div className="flex p-2 items-center sm:flex-col md:flex-row lg:flex-row">
+      <div className="flex p-2 items-center flex-col md:flex-row lg:flex-row">
         <div className="w-full mb-2 sm:w-full md:w-80 lg:w-80 px-2 sm:px-2 md:px-10 lg:px-10">
           <h4 className="mt-0 mb-2">{name}</h4>
           <h5 className="my-2 text-[#5e5d5d]">{price / 100}Rs</h5>
@@ -78,7 +78,7 @@ const MealComponent = (curMenu) => {
           </div>
         </div>
       </div>
-      <hr className="w-full" />
+      <hr className="w-full " />
     </>
   );
 };
