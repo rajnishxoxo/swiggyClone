@@ -1,9 +1,9 @@
-import { useState, useContext} from "react";
+import { useState, useContext } from "react";
 import InputControl from "./InputControl";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { useDispatch } from "react-redux"; 
+import { useDispatch } from "react-redux";
 import { setUser } from "../utils/userSlice";
 
 const Login = () => {
@@ -93,23 +93,22 @@ const Login = () => {
           )}
 
           <div className="w-full m-2">
-            {
-              loginInProcess ? (
-                <button
-              className="bg-gray-500 border rounded p-2 w-full font-Arvo text-lg" disabled={true}
-              onClick={handleClick}
-            >
-              Log In
-            </button>
-              ): (
-                <button
-              className="bg-green-400 border rounded p-2 w-full font-Arvo text-lg"
-              onClick={handleClick}
-            >
-              Log In
-            </button>
-              )
-            }
+            {loginInProcess ? (
+              <button
+                className="bg-gray-500 border rounded p-2 w-full font-Arvo text-lg"
+                disabled={true}
+                onClick={handleClick}
+              >
+                Log In
+              </button>
+            ) : (
+              <button
+                className="bg-green-400 border rounded p-2 w-full font-Arvo text-lg"
+                onClick={handleClick}
+              >
+                Log In
+              </button>
+            )}
           </div>
 
           <p className="font-Arvo">
