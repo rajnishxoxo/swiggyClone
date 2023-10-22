@@ -96,60 +96,11 @@ const Cart = () => {
     <>
       <div className="flex bg-slate-200 px-4 min-h-screen">
         {/* account details side */}
-        <div className="w-[70%] m-4 p-4">
-          {/* Account */}
-          <div className="py-5 px-10 bg-white">
-            <h3 className="text-lg font-bold font-Arvo">Account</h3>
-
-            {currentUser ? (
-              <div className="my-1">
-                {/* personal information */}
-                <div className="my-1">
-                  <h2 className="text-md font-semibold font-Arvo">
-                    Personal Information
-                  </h2>
-                  <h2 className="text-md font-Arvo m-1">
-                    Name: {currentUser.displayName}
-                  </h2>
-                  <h3 className="text-md font-Arvo m-1">
-                    Email: {currentUser.email}
-                  </h3>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <h4 className="font-Arvo text-slate-400 mb-4">
-                  To place your order now, log in to your existing account or
-                  sign up.
-                </h4>
-                <Link to="/login">
-                  <button className="border border-green-700 rounded text-green-700 font-Arvo mx-2 py-1 px-3 text-sm">
-                    Have an account? <br />
-                    <span className="text-md ">LOG IN</span>
-                  </button>
-                </Link>
-                <Link to="/signup">
-                  <button className="bg-green-700 rounded text-white font-Arvo mx-2 py-1 px-3 text-sm">
-                    New to Food Studio? <br />
-                    <span className="text-md"> SIGN UP</span>
-                  </button>
-                </Link>
-              </div>
-            )}
-          </div>
-          {/* Delivery Address */}
-          <div className="py-5 px-10 bg-white my-4">
-            <h3 className=" font-Arvo font-bold text-lg">Delivery Address</h3>
-          </div>
-          {/* payment */}
-          <div className="py-5 px-10 bg-white my-4">
-            <h3 className="font-Arvo font-bold text-lg">Payment</h3>
-          </div>
-        </div>
+        
 
         {/* Cart details side */}
         {cartItems.items.length > 0 && (
-          <div className="bg-white w-[30%] h-[70vh] p-4 my-8 mx-4 ">
+          <div className="bg-white w-[80%] h-[70vh] p-4 my-8 mx-4 ">
             {/* restaurant details */}
             <div className="flex">
               <div className="w-16 h-12 mx-2 overflow-hidden">
