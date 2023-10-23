@@ -79,7 +79,7 @@ const Header = () => {
               </Link>
             ) : (
               <div className="flex flex-row justify-between items-center">
-                <h1 className="m-1 border-2 bg-gray-400 rounded p-1 font-Arvo text-[18px] h-[37px]">
+                <h1 className="m-1 border-2 bg-gray-400 rounded text-center font-Arvo text-[12px] h-auto lg:text-[18px] lg:h-[37px]">
                   Welcome {userName}
                 </h1>
                 <button
