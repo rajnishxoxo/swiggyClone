@@ -5,6 +5,7 @@ import { addItem, clearCart, removeItem } from "../utils/cartSlice";
 import { IMG_CDN_URL } from "./Config";
 import { auth, database } from "../firebase";
 import PathContext from "../utils/PathContext";
+import { emptyCartImageURL } from "../utils/utils";
 
 const Cart = () => {
   //------------------------------------------- Initialisation area ---------------------------------------
@@ -96,10 +97,9 @@ const Cart = () => {
     <>
       <div className="flex bg-slate-200 px-4 min-h-screen mx-auto">
         {/* account details side */}
-        
 
         {/* Cart details side */}
-        {cartItems.items.length > 0 && (
+        {cartItems.items.length > 0 ? (
           <div className="bg-white w-[80%] h-[70vh] p-4 my-8 mx-4 ">
             {/* restaurant details */}
             <div className="flex">
@@ -164,6 +164,14 @@ const Cart = () => {
                 CheckOut
               </button>
             </div>
+          </div>
+        ) : (
+          <div className="flex flex-col">
+            <h1 className="">Your Card is Empty</h1>
+            <img
+              className="lg:w-2/5 my-auto  rounded w-[400px]"
+              src={emptyCartImageURL}
+            />
           </div>
         )}
       </div>
