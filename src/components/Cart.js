@@ -166,7 +166,7 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col justify-evenly">
+          <div className="flex flex-col justify-evenly items-center">
             <h1 className=" text-center font-Arvo text-xl">
               Your Card is Empty 😔
             </h1>
