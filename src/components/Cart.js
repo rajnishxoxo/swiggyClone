@@ -166,10 +166,15 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col">
-            <h1 className="">Your Card is Empty</h1>
+          <div className="flex flex-col justify-evenly">
+            <h1 className=" text-center font-Arvo text-xl">
+              Your Card is Empty 😔
+            </h1>
+            <p className="text-center font-Arvo text-xl">
+              Please Add Some Food 🥘
+            </p>
             <img
-              className="lg:w-2/5 my-auto  rounded w-[400px]"
+              className="lg:w-2/5  rounded-lg w-[400px]"
               src={emptyCartImageURL}
             />
           </div>
